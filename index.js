@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import cookieParser from "cookie-parser";
 
 //own
 import database from "./db.js";
@@ -15,9 +16,10 @@ const port = process.env.PORT || 8800;
 
 // middleware
 app.use(express.json());
+app.use(cookieParser());
 
-app.use("/api/register", authRouter);
-app.use("/api/login", authRouter);
+app.use("/api/auth", authRouter);
+app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
 app.use("/api/hotels", hotelRouter);
 app.use("/api/rooms", roomRouter);
