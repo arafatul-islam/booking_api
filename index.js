@@ -19,7 +19,6 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/api/auth", authRouter);
-app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
 app.use("/api/hotels", hotelRouter);
 app.use("/api/rooms", roomRouter);

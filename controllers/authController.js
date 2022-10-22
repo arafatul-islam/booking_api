@@ -50,16 +50,4 @@ export const login = async (req, res, next) => {
   }
 };
 
-export const updateHotel = async (req, res, next) => {
-  try {
-  } catch (error) {
-    res.status(500).send("You are not an admin");
-  }
-};
 
-export const deleteHotel = async (req, res, next) => {
-  try {
-  } catch (error) {
-    res.status(500).send("You are not an admin");
-  }
-};
